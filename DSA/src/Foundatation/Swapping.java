@@ -9,8 +9,8 @@ public class Swapping {
     }
 
     public static void withOutThirdVariable(int a,int b){
-        a = a + b; //30
-        b = a - b; //10
+        a = a + b;
+        b = a - b;
         a = a - b;
         System.out.println("a :"+a +"\nb :"+b);
     }
