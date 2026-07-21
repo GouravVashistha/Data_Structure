@@ -44,6 +44,20 @@ public class TwoDimensionalArray {
 
     }
 
+    static void multiArrays() {
+        int[][] arr = {{23, 45, 76}, {2, 34, 67}, {674, 5, 3}};
+//        System.out.println(arr[0][0]);
+//        System.out.println(arr[0][1]);
+//        System.out.println(arr[0][2]);
+//
+//        System.out.println(arr[1][0]);
+//        System.out.println(arr[1][1]);
+//        System.out.println(arr[1][2]);
+
+
+        System.out.println(arr.length);
+    }
+
 
     public static void main(String[] args) {
 
@@ -51,22 +65,23 @@ public class TwoDimensionalArray {
 //        oneD();
         // Two Dimensional Array
 //        twoD();
-        Scanner sc = new Scanner(System.in);
-        int[][] arr = new int[3][3];
-        for (int row = 0; row < arr.length; row++) {
-            for (int col = 0; col < arr[row].length; col++) {
-                arr[row][col] = sc.nextInt();
-            }
-        }
+//        Scanner sc = new Scanner(System.in);
+//        int[][] arr = new int[3][3];
+//        for (int row = 0; row < arr.length; row++) {
+//            for (int col = 0; col < arr[row].length; col++) {
+//                arr[row][col] = sc.nextInt();
+//            }
+//        }
 
 
-        for (int row = 0; row < arr.length; row++) {
-            for (int col = 0; col < arr[row].length; col++) {
-                System.out.print(arr[row][col] + " ");
-            }
-            System.out.println();
-        }
+//        for (int row = 0; row < arr.length; row++) {
+//            for (int col = 0; col < arr[row].length; col++) {
+//                System.out.print(arr[row][col] + " ");
+//            }
+//            System.out.println();
+//        }
 
+        multiArrays();
 
     }
 }
