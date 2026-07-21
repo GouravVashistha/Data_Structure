@@ -8,9 +8,9 @@ public class ArrayTraversingUsingWhileLoop {
 
         int i = 0;
 
-        while (i < 3) {
+        while (i < ages.length) {
             System.out.println(ages[i]);
-            ++i;
+            i++;
         }
     }
 }
