@@ -67,15 +67,39 @@ public class BasicTraversalArrayCodingQuestions {
         return secondSmallest > Integer.MAX_VALUE ? -1 : secondSmallest;
     }
 
-//    Count even and odd numbers in an array.
+    //    Count even and odd numbers in an array.
+    static void evenAndOdd() {
+        int[] input = {1, 2, 3, 4, 5};
+        int even = 0;
+        int odd = 0;
+        for (int i = 0; i < input.length; i++) {
+            if(input[i] % 2==0){
+                even++;
+            }else {
+                odd++;
+            }
+        }
+        System.out.println("even = " + even);
+        System.out.println("odd = " + odd);
+    }
 
+//    Calculate the sum of all elements.
 
-
+    static void sumOfArray(){
+        int[] input = {1, 2, 3, 4, 5};
+        int sum = 0;
+        for(int i = 0; i<input.length; i++){
+            sum = sum + input[i];
+        }
+        System.out.println(sum);
+    }
 
     public static void main(String[] args) {
 //        smallestElement();
 //        secondLargestElement();
 //        System.out.println(secondLargestElementAnotherWay());
-        System.out.println(secondSmallestElement());
+//        System.out.println(secondSmallestElement());
+//        evenAndOdd();
+        sumOfArray();
     }
 }
