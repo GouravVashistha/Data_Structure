@@ -48,9 +48,34 @@ public class BasicTraversalArrayCodingQuestions {
         }
     }
 
+    // Find the second smallest element.
+
+    static int secondSmallestElement() {
+        int[] arr = {3, 5, 2, 9, 1};
+        int firstSmallest = Integer.MAX_VALUE;
+        int secondSmallest = Integer.MAX_VALUE;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < firstSmallest) {
+                secondSmallest = firstSmallest;
+                firstSmallest = arr[i];
+            } else if (arr[i] < firstSmallest && arr[i] != firstSmallest) {
+                secondSmallest = secondSmallest;
+            }
+        }
+
+        return secondSmallest > Integer.MAX_VALUE ? -1 : secondSmallest;
+    }
+
+//    Count even and odd numbers in an array.
+
+
+
+
     public static void main(String[] args) {
 //        smallestElement();
 //        secondLargestElement();
-        System.out.println(secondLargestElementAnotherWay());
+//        System.out.println(secondLargestElementAnotherWay());
+        System.out.println(secondSmallestElement());
     }
 }
