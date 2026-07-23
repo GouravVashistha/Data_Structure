@@ -1,5 +1,7 @@
 package DSA.ArraysAndArrayList;
 
+import java.util.Arrays;
+
 public class ArrayRefrenceCodingQuestion {
 
     // Count the number of occurrences of a particular element X;
@@ -45,7 +47,7 @@ public class ArrayRefrenceCodingQuestion {
     // Check Given array is sorted or not
 
     static void sorted() {
-        int[] arr = {1, 2, 2 , 4, 5};
+        int[] arr = {1, 2, 2, 4, 5};
 
         boolean isSorted = true;
 
@@ -64,13 +66,20 @@ public class ArrayRefrenceCodingQuestion {
         }
     }
 
-
+    static int[] smallestAndLargest(int[] arr){
+        Arrays.sort(arr);
+        int[] ans= {arr[0],arr[arr.length-1]};
+        return ans;
+    }
     public static void main(String[] args) {
 
 //        count_Occurrences(2);
 //        Last_occurrence(5);
 //        strictly_greater(5);
-        sorted();
+//        sorted();
+        int[] arr = {1, 5, 2, 8, 3, 9};
+        int[] ans = smallestAndLargest(arr);
+        System.out.println(Arrays.toString(ans));
     }
 
 }
