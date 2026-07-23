@@ -22,16 +22,55 @@ public class ArrayRefrenceCodingQuestion {
         int[] arr = {1, 2, 5, 2, 5, 3};
         int last_occ = -1;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == x){
+            if (arr[i] == x) {
                 last_occ = i;
             }
         }
         System.out.println(last_occ);
     }
 
+    // Count the number of element strictly greater than value X;
+
+    static void strictly_greater(int x) {
+        int[] arr = {1, 5, 2, 8, 3, 9};
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > x) {
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+
+    // Check Given array is sorted or not
+
+    static void sorted() {
+        int[] arr = {1, 2, 2 , 4, 5};
+
+        boolean isSorted = true;
+
+        for (int i = 0; i < arr.length - 1; i++) {
+
+            if (arr[i] > arr[i + 1]) {
+                isSorted = false;
+                break;
+            }
+        }
+
+        if (isSorted) {
+            System.out.println("sorted");
+        } else {
+            System.out.println("not sorted");
+        }
+    }
+
+
     public static void main(String[] args) {
 
 //        count_Occurrences(2);
-        Last_occurrence(5);
+//        Last_occurrence(5);
+//        strictly_greater(5);
+        sorted();
     }
+
 }
