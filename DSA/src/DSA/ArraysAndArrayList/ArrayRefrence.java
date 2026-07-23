@@ -3,6 +3,19 @@ package DSA.ArraysAndArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/*
+ Reference Variable aur Memory Internals
+
+Reference variable heap mein bane array ke base address (jaise 101) ko point karta hai.
+Index calculation: arr[i] ka matlab hai base address se i distance door ki value.
+4. Shallow Copy vs Deep Copy
+
+Shallow Copy (Assignment Operator): int[] arr2 = arr1; karne se naya array nahi banta, balki dono variables ek hi memory address ko point karte hain. Isliye, agar aap arr2 mein change karenge, toh arr1 mein bhi change dikhega (25:50).
+Deep Copy (.clone()): int[] arr2 = arr1.clone(); karne se heap mein bilkul naya memory block allocate hota hai. Isse dono arrays independent ho jaate hain (34:47).
+5. Java Methods aur Arrays
+
+Jab hum array ko kisi method mein pass karte hain, toh reference ki copy pass hoti hai. Agar method ke andar index change karenge (arr[0]=0), toh wo main array mein reflect hoga, lekin agar new array assign kar denge, toh original array change nahi hoga.
+ */
 public class ArrayRefrence {
     static void printArr(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
@@ -31,7 +44,9 @@ public class ArrayRefrence {
         arr[4] = 5;
         System.out.println("original array");
         printArr(arr);
-        int[] arr_2 = arr.clone();
+//        int[] arr_2 = arr.clone();
+        int[] arr_2 = Arrays.copyOf(arr, arr.length);
+        int[] arr_3 = Arrays.copyOfRange(arr,0, arr.length);
         System.out.println("copyed  array");
         printArr(arr_2);
 

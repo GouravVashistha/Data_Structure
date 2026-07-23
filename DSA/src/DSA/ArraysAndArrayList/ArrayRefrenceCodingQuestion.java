@@ -1,0 +1,37 @@
+package DSA.ArraysAndArrayList;
+
+public class ArrayRefrenceCodingQuestion {
+
+    // Count the number of occurrences of a particular element X;
+
+    static void count_Occurrences(int x) {
+        int[] arr = {1, 2, 2, 3, 2};
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == x) {
+                count++;
+            }
+        }
+        System.out.println(count);
+
+    }
+
+    // Find the Last occurrence of an element x in a given array
+
+    static void Last_occurrence(int x) {
+        int[] arr = {1, 2, 5, 2, 5, 3};
+        int last_occ = -1;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == x){
+                last_occ = i;
+            }
+        }
+        System.out.println(last_occ);
+    }
+
+    public static void main(String[] args) {
+
+//        count_Occurrences(2);
+        Last_occurrence(5);
+    }
+}
