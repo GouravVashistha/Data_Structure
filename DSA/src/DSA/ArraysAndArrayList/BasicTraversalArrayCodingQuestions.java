@@ -73,9 +73,9 @@ public class BasicTraversalArrayCodingQuestions {
         int even = 0;
         int odd = 0;
         for (int i = 0; i < input.length; i++) {
-            if(input[i] % 2==0){
+            if (input[i] % 2 == 0) {
                 even++;
-            }else {
+            } else {
                 odd++;
             }
         }
@@ -85,10 +85,10 @@ public class BasicTraversalArrayCodingQuestions {
 
 //    Calculate the sum of all elements.
 
-    static void sumOfArray(){
+    static void sumOfArray() {
         int[] input = {1, 2, 3, 4, 5};
         int sum = 0;
-        for(int i = 0; i<input.length; i++){
+        for (int i = 0; i < input.length; i++) {
             sum = sum + input[i];
         }
         System.out.println(sum);
