@@ -3,7 +3,7 @@ package DSA.ArraysAndArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class BasicsProblemSolving {
+public class TargetSum {
 
     // Q 1 :- Find the total number of paires in the array whose sum is equal to the fix given value X;
 
@@ -70,6 +70,7 @@ public class BasicsProblemSolving {
         return count;
     }
 
+    // Q 2 count the number of triplets whose sum is equal to the given value x;
 
     public static void main(String[] args) {
         int[] arr = {4, 6, 3, 5, 8, 2};
