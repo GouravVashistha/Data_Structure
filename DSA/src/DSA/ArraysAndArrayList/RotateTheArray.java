@@ -23,9 +23,39 @@ public class RotateTheArray {
         return ans;
     }
 
+    // without using extra space
+
+    static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+    static void revers(int[] arr, int i,int j) {
+        while (i < j) {
+            swap(arr, i, j);
+            i++;
+            j--;
+        }
+    }
+
+    public static int[] rotateAnotherWay(int[] arr, int k) {
+        int n = arr.length;
+        k = k % n;
+
+        revers(arr, 0, n - k - 1);
+        revers(arr, n - k, n - 1);
+        revers(arr, 0, n - 1);
+
+
+        return arr;
+
+    }
+
     public static void main(String[] args) {
         int arr[] = {1, 2, 3, 4, 5};
         int steps = 2;
-        System.out.println(Arrays.toString(rotate(arr, steps)));
+//        System.out.println(Arrays.toString(rotate(arr, steps)));
+        System.out.println(Arrays.toString(rotateAnotherWay(arr, steps)));
     }
 }
