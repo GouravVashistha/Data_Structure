@@ -2,7 +2,7 @@ package DSA.ArraysAndArrayList;
 
 import java.util.Arrays;
 
-public class SortBinaryArray {
+public class SortBinaryArrayTwoPointer {
 
 //    Recommendation
 //    Easy to understand: sortUsingCounting()
